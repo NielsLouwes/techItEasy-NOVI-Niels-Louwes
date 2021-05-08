@@ -427,25 +427,25 @@ document.body.appendChild(tvFourOnPage3);
 
 // Opdracht 5e: Schrijf een functie die ALLE tv's weergeeft op de pagina zoals in het voorbeeld. Dit wil je natuurlijk niet acht keer opnieuw schrijven, want nu zijn het 8 tv's, maar in de toekomst misschien wel 200! Gebruik in deze functie de voorgaande functies die je hebt geschreven, om onderdelen van de data te formatten. Deze "tv-generator-functie" verwacht één parameter: de volledige array met tv-objecten. Vergeet 'm niet aan te roepen!
 
-//
-// function generate(array) {
-//   let tvInfo = [];
-//   for (let i = 0; i < inventory.length; i++) {
-//     tvInfo += ('Heey! '+ tvDetailsShort[i] + ' ' + priceTag[i] + ' ' + screensAll[i]);
-//   }
-//   return tvInfo;
-// }
-// console.log(generate(inventory));
 
-// const showTvDetails = (tvObject)=>{
-//   for (let i = 0; i < inventory.length;i++){
-//     return`${tvDetailsShort[i]} \n
-//  ${priceTag[i]}\n
-//  ${screensAll[i]};
-//   `
-//   }
-//   return tvObject;
-// };
+function generate(array) {
+  let tvInfo = [];
+  for (let i = 0; i < inventory.length; i++) {
+    tvInfo += ('Heey! '+ tvDetailsShort[i] + ' ' + priceTag[i] + ' ' + screensAll[i]);
+  }
+  return tvInfo;
+}
+console.log(generate(inventory));
+
+const showTvDetails = (tvObject)=>{
+  for (let i = 0; i < inventory.length;i++){
+    return`${tvDetailsShort[i]} \n
+ ${priceTag[i]}\n
+ ${screensAll[i]};
+  `
+  }
+  return tvObject;
+};
 
 // console.log(showTvDetails(inventory));
 
